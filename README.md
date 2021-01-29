@@ -17,7 +17,7 @@
 1. 安装 serve 工具：
 
     ```bash
-    npm run serve
+    npm i -g serve
     ```
 
 2. 进入 daxigua 目录，运行 serve：
