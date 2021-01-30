@@ -1,3 +1,7 @@
+/**
+ * 声明，本项目仅帮助大家学习技术及娱乐，切勿将修改后的网站大规模传播及商用，以避免侵权！
+ */
+
 // 额外分数：修改数字
 let extraScore = 1;
 
@@ -13,6 +17,8 @@ let fruitQTan = false;
 // 让水果下落缓慢：false 改为大于 0 的任意数，值越大阻力越大，下落越慢（推荐 5）
 let fruitSlowDown = false;
 
+// 修改网页标题：将 "合成大西瓜" 进行替换
+document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
 
 // 开启弹窗，暂不支持
 let selectModal = false;
