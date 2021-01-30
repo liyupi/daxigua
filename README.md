@@ -2,6 +2,8 @@
 
 **声明，本项目仅帮助大家学习技术及娱乐，切勿将修改后的网站大规模传播及商用，以避免侵权！**
 
+> 最简单的魔改发布『 合成大西瓜 』，不用改代码，修改配置即可！
+>
 > 有帮助的话，求个大大的 star，有疑问请联系 wx：liyupi66
 > 
 > 遇到问题可以先阅读本文档最后『 问题及解决 』
@@ -42,7 +44,7 @@
 
 1. 改分数：改 extraSettings.js 文件
 
-2. 改图片：替换 res/raw-assets 目录下指定目录的图片，必须同文件名、后缀、尺寸，成功覆盖可生效
+2. 改图片：替换 res/raw-assets 目录下指定目录的图片，必须同文件名、后缀、尺寸，成功覆盖可生效，[可替换素材文档](https://docs.qq.com/sheet/DS0d2VVVJYmpvZ0pZ)
 
 3. 无敌模式：改 extraSettings.js 文件
 
@@ -56,9 +58,9 @@
 
 8. 水果下落速度减缓：改 extraSettings.js 文件，[原理参考](https://docs.cocos.com/creator/manual/zh/physics/physics/rigid-body.html?h=%E5%88%9A%E4%BD%93)
 
-9. 替换音乐：，覆盖 res/raw-assets 目录下相同的音乐
+9. 替换音乐：，覆盖 res/raw-assets 目录下相同的音乐，[可替换素材文档](https://docs.qq.com/sheet/DS0d2VVVJYmpvZ0pZ)
 
-10. 替换背景：和改图片原理相同
+10. 替换背景：和改图片原理相同，[可替换素材文档](https://docs.qq.com/sheet/DS0d2VVVJYmpvZ0pZ)
 
 11. 去广告：将广告图片替换为[同背景色底图](https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/0.png)
 
