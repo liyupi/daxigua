@@ -4,6 +4,8 @@
 > 
 > 遇到问题可以先阅读本文档最后『 问题及解决 』
 
+1 月 31 日晚 21 点，bilibili 直播交流，[程序员鱼皮](https://space.bilibili.com/12890453)  
+
 详细教程：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
 
 视频教程：[全网最贴心的魔改合成大西瓜教程，从修改到发布！](https://www.bilibili.com/video/BV1Vy4y1n7KW/)
@@ -59,6 +61,9 @@
 11. 去广告
 
 12. 替换广告链接
+
+13. 改网站标题
+
 
 ### 魔改原理
 
