@@ -62,7 +62,7 @@
 
 11. 去广告
 
-12. 替换广告链接
+12. 替换广告链接：改 extraSettings.js 文件
 
 13. 改网站标题：改 extraSettings.js 文件
 
