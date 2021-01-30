@@ -58,6 +58,8 @@
 
 11. 去广告
 
+12. 替换广告链接
+
 ### 魔改原理
 
 请先阅读：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
@@ -66,4 +68,14 @@
 
 ### 问题及解决
 
+1. 无法安装 serve？
 
+    答：如果报找不到 npm，请先安装 npm。
+
+    如果安装中卡住，试着按下键盘（可能假死），还不行的话先安装 cnpm（国内镜像，比较快）：
+    
+    ```bash
+    npm install cnpm -g --registry=https://registry.npm.taobao.org 
+    ```
+    
+    再执行 `cnpm i -g serve`。
