@@ -1,8 +1,8 @@
 // 额外分数：修改数字
 let extraScore = 1;
 
-// 无敌模式：false 改为 true
-let wuDi = false;
+// 无敌模式：true 改为 false
+let wuDi = true;
 
 // 第一个水果：修改数字为 0-10
 let firstFruit = 0;
