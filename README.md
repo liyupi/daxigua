@@ -50,7 +50,7 @@
 
 4. 指定第一个水果：改 extraSettings.js 文件
 
-5. 指定下一个水果：在 project.js 代码中搜索 "改下一个水果"
+5. 指定下次出现的水果：改 extraSettings.js 文件
 
 6. 大水果合成小水果：在 project.js 代码中搜索 "大水果合成小水果"
 
