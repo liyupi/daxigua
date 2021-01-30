@@ -6,7 +6,7 @@
 
 详细教程：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
 
-视频教程：
+视频教程：[全网最贴心的魔改合成大西瓜教程，从修改到发布！](https://www.bilibili.com/video/BV1Vy4y1n7KW/)
 
 未修改版在线玩：[https://daxigua.liyupi.com](https://daxigua.liyupi.com)
 
