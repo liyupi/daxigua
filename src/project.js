@@ -1200,6 +1200,9 @@ window.__require = function e(t, n, o) {
             n.scale = 0;
             // 物理引擎
             n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static;
+            if (fruitSlowDown) {
+              n.getComponent(cc.RigidBody).linearDamping = fruitSlowDown;
+            }
             n.getComponent(cc.PhysicsCircleCollider).radius = 0;
             // 让说过更 Q 弹
             if (fruitQTan) {

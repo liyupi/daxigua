@@ -1,14 +1,16 @@
 ## 合成大西瓜
 
-未修改版源码，可直接在浏览器运行。
+> 有帮助的话，求个大大的 star，有疑问请联系 wx：liyupi66，晚点回复，视频制作中
 
-详细教程：https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw
+详细教程：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
 
-在线玩：[https://daxigua.liyupi.com](https://daxigua.liyupi.com)
+视频教程：制作中。。。
 
-看了下源码，改分数还是挺简单的，就也做了魔改版~ 输入分数加成（纯数字）即可，输入 1 为原版
+未修改版在线玩：[https://daxigua.liyupi.com](https://daxigua.liyupi.com)
 
 魔改版在线玩：[https://dadaxigua.liyupi.com](https://dadaxigua.liyupi.com)
+
+未修改版源码：https://github.com/liyupi/daxigua/releases/tag/1.0.0
 
 ![秀爆朋友圈](./assets/dadaxigua.png)
 
@@ -34,21 +36,21 @@
 
 > 按照下列说明修改即可，持续补充
 
-1. 改分数：在 project.js 代码中搜索 "改分数"
+1. 改分数：改 extraSettings.js 文件
 
 2. 改图片：替换 res/raw-assets 目录下指定目录的图片，必须同文件名、后缀、尺寸，成功覆盖可生效
 
-3. 无敌模式：在 project.js 代码中搜索 "改无敌"
+3. 无敌模式：改 extraSettings.js 文件
 
-4. 指定第一个水果：在 project.js 代码中搜索 "改第一个水果"
+4. 指定第一个水果：改 extraSettings.js 文件
 
 5. 指定下一个水果：在 project.js 代码中搜索 "改下一个水果"
 
 6. 大水果合成小水果：在 project.js 代码中搜索 "大水果合成小水果"
 
-7. 让水果更 Q 弹：：在 project.js 代码中搜索 "让水果更 Q 弹"
+7. 让水果更 Q 弹：改 extraSettings.js 文件，[原理参考](https://docs.cocos.com/creator/api/zh/classes/PhysicsCircleCollider.html?h=circlecollider)
 
-8. 水果下落速度减缓
+8. 水果下落速度减缓：改 extraSettings.js 文件，[原理参考](https://docs.cocos.com/creator/manual/zh/physics/physics/rigid-body.html?h=%E5%88%9A%E4%BD%93)
 
 9. 替换音乐
 
@@ -58,7 +60,11 @@
 
 ### 魔改原理
 
+请先阅读：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
+
 游戏的过程是：点击 => 碰撞 => 计分 => 展示
+
+> 我给 project.js 文件补充了注释，大家可以搜索关键字，如 "改分" 来快速定位，掌握修改原理。
 
 #### 1. 改分数
 
