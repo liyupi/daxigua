@@ -29,8 +29,9 @@ input::-webkit-inner-spin-button {
 body {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: min(100vw, 50vh);
     height: 100%;
     padding: 0;
     border: 0;
