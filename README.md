@@ -56,11 +56,11 @@
 
 8. 水果下落速度减缓：改 extraSettings.js 文件，[原理参考](https://docs.cocos.com/creator/manual/zh/physics/physics/rigid-body.html?h=%E5%88%9A%E4%BD%93)
 
-9. 替换音乐
+9. 替换音乐：，覆盖 res/raw-assets 目录下相同的音乐
 
-10. 替换背景
+10. 替换背景：和改图片原理相同
 
-11. 去广告
+11. 去广告：将广告图片替换为[同背景色底图](https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/0.png)
 
 12. 替换广告链接：改 extraSettings.js 文件
 
