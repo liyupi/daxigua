@@ -2,13 +2,12 @@
  * 分数加成
  * @type {number}
  */
-let extraScore;
-let extraScoreStr = '';
-
-while (isNaN(extraScore)) {
-  extraScoreStr = prompt('请输入分数加成数字', '1').trim();
-  extraScore = parseInt(extraScoreStr);
-}
+// let extraScoreStr = '';
+//
+// while (isNaN(extraScore)) {
+//   extraScoreStr = prompt('请输入分数加成数字', '1').trim();
+//   extraScore = parseInt(extraScoreStr);
+// }
 
 window.__require = function e(t, n, o) {
   function c(i, r) {
@@ -1151,7 +1150,7 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start(),
             this.lineNode.children[0].active = !1,
             this.fruitS = ["PuTaoS", "YingTaoS", "JuZiS", "NingMengS", "MiHouTaoS", "XiHongShiS", "TaoS", "BoLuoS", "YeZiS", "XiGuaS"],
-            this.createOneFruit(0) // 首个水果
+            this.createOneFruit(firstFruit) // 第一个水果
         }, t.prototype.update = function (e) {
           a.default.GameUpdateCtrl, this.lineNode.children[0].y - n.Instance.fruitHeigth < 100 && this.lineNode.children[0].y - n.Instance.fruitHeigth >= 0 && (this.lineNode.children[0].active = !0), this.lineNode.children[0].y - n.Instance.fruitHeigth > 100 && (this.lineNode.children[0].active = !1)
         }, t.prototype.end = function () {
@@ -1192,20 +1191,22 @@ window.__require = function e(t, n, o) {
         },
           // 生成水果
           t.prototype.createOneFruit = function (e) {
-            var t = this,
-              n = cc.instantiate(this.fruitPre);
-            n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e],
-              n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e],
-              n.getComponent("fruitData").fruitNumber = e,
-              n.position = this.lineNode.children[1].position,
-              n.scale = 0,
-              // 物理引擎
-              n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static,
-              n.getComponent(cc.PhysicsCircleCollider).radius = 0,
-              // n.getComponent(cc.PhysicsCircleCollider).restitution = 0.9, 取消注释则弹力十足
-              n.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(n).to(.5, {
-              scale: 1
-            }, {
+            var t = this, n = cc.instantiate(this.fruitPre);
+            n.parent = this.lineNode;
+            n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e];
+            n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e];
+            n.getComponent("fruitData").fruitNumber = e;
+            n.position = this.lineNode.children[1].position;
+            n.scale = 0;
+            // 物理引擎
+            n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static;
+            n.getComponent(cc.PhysicsCircleCollider).radius = 0;
+            // 让说过更 Q 弹
+            if (fruitQTan) {
+              n.getComponent(cc.PhysicsCircleCollider).restitution = fruitQTan;
+            }
+            n.getComponent(cc.PhysicsCircleCollider).apply();
+            cc.tween(n).to(.5, {scale: 1}, {
               easing: "backOut"
             }).call(function () {
               t.targetFruit = n
@@ -3444,7 +3445,7 @@ window.__require = function e(t, n, o) {
           && this.endCtrl
           && 0 == this.endOne
           && this.testEndDJS > 3
-          && true) { // 无敌模式（true 改 false）
+          && wuDi) { // 无敌模式
             a.default.GameUpdateCtrl = !1, a.default.playerTouch = !1;
             for (var n = 0; n < cc.find("Canvas/fruitNode").children.length; n++) cc.find("Canvas/fruitNode").children[n].removeComponent(cc.PhysicsCircleCollider), cc.find("Canvas/fruitNode").children[n].removeComponent(cc.RigidBody);
             this.node.color = cc.Color.RED, cc.tween(this.node).to(.3, {
@@ -3468,7 +3469,7 @@ window.__require = function e(t, n, o) {
               r = n.node.getComponent("fruitData").fruitNumber;
             // 合成水果，水果下标 0-9 (0 为葡萄，9 为半个西瓜，有一些特殊逻辑)
             c == r && c < 9 && r < 9 ? (this.pengzhuangCount += 1,
-              0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + extraScore,
+              0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + extraScore ? extraScore : 1,
                 u.default.Instance.SetScoreTween(a.default.score),
                 n.node.getComponent(cc.PhysicsCircleCollider).radius = 0,
                 n.node.getComponent(cc.PhysicsCircleCollider).apply(),
