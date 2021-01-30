@@ -11,6 +11,18 @@ let wuDi = true;
 // 第一个水果：修改数字为 0-10
 let firstFruit = 0;
 
+let setFruit = {
+  startFruits: [],
+  minNum: 0,
+  maxNum: 5,
+  randomFunction: () => {
+    return this.minNum + Math.floor(Math.random() * (this.maxNum - this.minNum))
+  }
+}
+
+// 水果合成反转：false 改为 true
+let reverseLevelUp = false;
+
 // 让水果更 Q 弹：false 改为大于 0 小于 1 的任意小数（推荐 0.9）
 let fruitQTan = false;
 
