@@ -77,7 +77,7 @@
 
 ### 问题及解决
 
-1. 无法安装 serve？
+1. 无法安装 serve 或者 Vercel？
 
     答：如果报找不到 npm，请先安装 npm。
 
@@ -87,15 +87,31 @@
     npm install cnpm -g --registry=https://registry.npm.taobao.org 
     ```
     
-    再执行 `cnpm i -g serve`。
+    再用 cnpm 安装： `cnpm i -g serve` 或 `cnpm i -g vercel`
     
 2. Vercel 网址被微信拦截怎么办？
-    
+   
     答：可以把网址复制到浏览器打开，也可以申请一个域名，在 Vercel 和服务提供商配置域名解析。
     Vercel 基本是海外的服务器，无需备案。
 
 3. 怎么在电脑上浏览网页游戏？
-    
+   
     答：在浏览器中，按 F12 打开开发者工具，点击像手机一样的图标即可。
     
-4. 
+4. 为什么 serve 后，打开网页一片空白？
+
+    答：大概率是你在错误的目录下执行了 serve，请务必在 index.html 所在的文件夹下执行 serve。
+
+5. 执行 vercel 命令显示 signUp？
+
+    答：要先去 [Vercel 官网](https://vercel.com/) 注册。
+
+6. vercel 邮箱验证失败？
+
+    答：先确认邮箱是否正确，如果验证失败，大概率是网络原因，请尝试 4G 等网络。
+
+7. 怎么使用 vercel 同时上线多个版本？
+
+    答：在输入 vercel 后，选择不和已有项目关联（link），并且使用一个新的项目名（project name）。
+
+8. 
