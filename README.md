@@ -18,9 +18,29 @@
 
 魔改版在线玩：[https://dadaxigua.liyupi.com](https://dadaxigua.liyupi.com)
 
-未修改版源码：https://github.com/liyupi/daxigua/releases/tag/1.0.0
+未修改版源码：[https://github.com/liyupi/daxigua/releases/tag/1.0.0](https://github.com/liyupi/daxigua/releases/tag/1.0.0)
+
+[新上线大西瓜改图工具，改图效率翻倍！](https://daxigua-tools.liyupi.com)
 
 ![秀爆朋友圈](./assets/dadaxigua.png)
+
+### 目录
+
+[一键部署](#一键部署)：适用于会 fork 仓库、提交代码的同学
+[本地启动](#本地启动)
+[快速魔改](#快速魔改)
+[魔改原理](#魔改原理)
+[问题及解决](#问题及解决)
+
+
+### 一键部署
+
+点击下方按钮，无需任何操作，即可部署我的仓库到腾讯云 ⬇️
+
+如果要替换为自己的一键部署
+
+[![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https://github.com/liyupi/daxigua&branch=master)
+
 
 ### 本地启动
 
