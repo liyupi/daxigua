@@ -14,7 +14,7 @@ let firstFruit = 0;
 // 水果合成反转：false 改为 true
 let reverseLevelUp = false;
 
-// 指定生成的水果：默认值 => 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
+// 指定生成的水果：默认值: 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
 const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
 const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
 let setFruits = {
