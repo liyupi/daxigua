@@ -37,7 +37,7 @@
 
 点击下方按钮，无需任何操作，即可部署我的仓库到腾讯云 ⬇️
 
-如果要替换为自己的一键部署
+> 如果要替换为一键部署自己的仓库，要先 fork 我的仓库，本地修改后再提交到自己 fork 的仓库，最后把一键部署按钮仓库地址改为自己的仓库即可！
 
 [![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https://github.com/liyupi/daxigua&branch=master)
 
