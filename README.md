@@ -22,6 +22,13 @@
 
 ![秀爆朋友圈](./assets/dadaxigua.png)
 
+### new！一键部署
+
+点击下方按钮，无需任何操作，即可部署应用 ⬇️
+
+[![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https://github.com/liyupi/daxigua&branch=master)
+
+
 ### 本地启动
 
 1. 安装 serve 工具：
