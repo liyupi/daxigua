@@ -52,7 +52,7 @@
 
 5. 指定下次出现的水果：改 extraSettings.js 文件
 
-6. 大水果合成小水果：在 project.js 代码中搜索 "大水果合成小水果"
+6. 大水果合成小水果：改 extraSettings.js 文件
 
 7. 让水果更 Q 弹：改 extraSettings.js 文件，[原理参考](https://docs.cocos.com/creator/api/zh/classes/PhysicsCircleCollider.html?h=circlecollider)
 
@@ -69,6 +69,8 @@
 13. 改网站标题：改 extraSettings.js 文件
 
 14. 开启选分弹窗：改 extraSettings.js 文件
+
+15. 点击右上方图标更换水果: 改 extraSettings.js 文件（暂未支持）
 
 
 ### 魔改原理
