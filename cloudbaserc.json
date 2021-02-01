@@ -4,6 +4,13 @@
   "version": "2.0",
   "framework": {
     "name": "daxigua",
-    "plugins": {}
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "outputPath": "./"
+        }
+      }
+    }
   }
 }
