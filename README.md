@@ -20,7 +20,7 @@
 
 未修改版源码：[https://github.com/liyupi/daxigua/releases/tag/1.0.0](https://github.com/liyupi/daxigua/releases/tag/1.0.0)
 
-[新上线大西瓜改图工具，改图效率翻倍！](https://daxigua-tools.liyupi.com)
+🔥 [新上线大西瓜改图工具，改图效率翻倍！](https://daxigua-tools.liyupi.com)
 
 ![秀爆朋友圈](./assets/dadaxigua.png)
 
