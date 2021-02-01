@@ -8,7 +8,7 @@
 > 
 > 遇到问题可以先阅读本文档最后[『 问题及解决 』](#问题及解决)
 
-1 月 31 日晚 21 点，bilibili 直播交流，[程序员鱼皮](https://space.bilibili.com/12890453)  
+2 月 1 日晚 22 点，bilibili 直播交流，[程序员鱼皮](https://space.bilibili.com/12890453)  
 
 详细教程：[魔改和上线你的合成大西瓜，最全教程！](https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw)
 
@@ -21,13 +21,6 @@
 未修改版源码：https://github.com/liyupi/daxigua/releases/tag/1.0.0
 
 ![秀爆朋友圈](./assets/dadaxigua.png)
-
-### new！一键部署
-
-点击下方按钮，无需任何操作，即可部署应用 ⬇️
-
-[![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https://github.com/liyupi/daxigua&branch=master)
-
 
 ### 本地启动
 
