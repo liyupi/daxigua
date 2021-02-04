@@ -1210,6 +1210,7 @@ window.__require = function e(t, n, o) {
             if (fruitSlowDown) {
               n.getComponent(cc.RigidBody).linearDamping = fruitSlowDown;
             }
+            n.getComponent(cc.RigidBody).active = false;
             n.getComponent(cc.PhysicsCircleCollider).radius = 0;
             // 让说过更 Q 弹
             if (fruitQTan) {
@@ -1604,7 +1605,7 @@ window.__require = function e(t, n, o) {
           i.default.playerTouch && null != a.default.Instance.targetFruit && (this.touchNum = 1, a.default.Instance.targetFruit.x = this.node.convertToNodeSpaceAR(e.getLocation()).x)
         }, t.prototype.onTouchEnd = function (e) {
           var t = this;
-          i.default.playerTouch && null != a.default.Instance.targetFruit && 1 == this.touchNum && (this.touchNum = 0, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).radius = a.default.Instance.targetFruit.height / 2, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).apply(), a.default.Instance.targetFruit.getComponent(cc.RigidBody).type = cc.RigidBodyType.Dynamic, a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), a.default.Instance.targetFruit = null,
+          i.default.playerTouch && null != a.default.Instance.targetFruit && 1 == this.touchNum && (this.touchNum = 0, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).radius = a.default.Instance.targetFruit.height / 2, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).apply(), a.default.Instance.targetFruit.getComponent(cc.RigidBody).active = true,a.default.Instance.targetFruit.getComponent(cc.RigidBody).type = cc.RigidBodyType.Dynamic, a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), a.default.Instance.targetFruit = null,
             // 生成指定水果
             this.scheduleOnce(function () {
               if (setFruits) {
@@ -3486,8 +3487,12 @@ window.__require = function e(t, n, o) {
             t.node.parent = cc.find("Canvas/fruitNode"), i.default.Instance.fruitHeigth = i.default.Instance.findHighestFruit(), null != t.node.getComponent(cc.RigidBody) && (t.node.getComponent(cc.RigidBody).angularVelocity = 0);
             var c = this.fruitNumber,
               r = n.node.getComponent("fruitData").fruitNumber;
+            // 控制合成水果的边界值
+            var border = reverseLevelUp ? 1 : 9;
+            // 控制合成水果后的升级逻辑
+            var fruitVolume = reverseLevelUp ? -1 : 1;
             // 合成水果，水果下标 0-9 (0 为葡萄，9 为半个西瓜，有一些特殊逻辑)
-            c == r && c < 9 && r < 9 ? (this.pengzhuangCount += 1,
+            c == r && (reverseLevelUp ? (c > border && r > border) : (c < border && r < border)) ? (this.pengzhuangCount += 1,
               0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + (extraScore ? extraScore : 1), // 改分数
                 u.default.Instance.SetScoreTween(a.default.score),
                 n.node.getComponent(cc.PhysicsCircleCollider).radius = 0,
@@ -3497,11 +3502,13 @@ window.__require = function e(t, n, o) {
                 cc.tween(t.node).to(.1, {
                   position: n.node.position
                 }).call(function () {
-                  i.default.Instance.createFruitSui(o.fruitNumber, n.node.position), i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width), i.default.Instance.createLevelUpFruit(o.fruitNumber + 1, n.node.position), n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
+                  i.default.Instance.createFruitSui(o.fruitNumber, n.node.position), i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width),
+                    i.default.Instance.createLevelUpFruit(o.fruitNumber + fruitVolume, n.node.position),
+                    n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
                 }).start())) :
-              c == r && 9 == c && 9 == r && // 边界逻辑
+              c == r && border == c && border == r && // 边界逻辑
               (this.pengzhuangCount += 1,
-              0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + 1,
+              0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + (extraScore ? extraScore : 1), // 改分数
                 u.default.Instance.SetScoreTween(a.default.score),
                 n.node.getComponent(cc.PhysicsCircleCollider).radius = 0,
                 n.node.getComponent(cc.PhysicsCircleCollider).apply(),
@@ -3513,19 +3520,19 @@ window.__require = function e(t, n, o) {
                 i.default.Instance.createFruitSui(o.fruitNumber, n.node.position),
                   i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width),
                   // +1 变 -1
-                  i.default.Instance.createLevelUpFruit(o.fruitNumber + 1, n.node.position);
+                  i.default.Instance.createLevelUpFruit(o.fruitNumber + fruitVolume, n.node.position);
                 var e = cc.find("Canvas/upEffectParent").getChildByName("daxigua");
                 e.active = !0, e.opacity = 0, cc.tween(e).to(.5, {
                   opacity: 150
                 }).start();
                 var c = new cc.Node;
-                c.addComponent(cc.Sprite).spriteFrame = l.default.Instance.fruit[10], c.parent = cc.find("Canvas/upEffectParent"), c.position = cc.v2(0, -500), c.scale = 0;
+                c.addComponent(cc.Sprite).spriteFrame = l.default.Instance.fruit[reverseLevelUp ? 0 : 10], c.parent = cc.find("Canvas/upEffectParent"), c.position = cc.v2(0, -500), c.scale = 0;
                 var r = new cc.Node;
                 r.addComponent(cc.Sprite).spriteFrame = l.default.Instance.caidia[6], r.scale = 3, r.parent = c, r.position = cc.v2(0), cc.tween(r).by(5, {
                   angle: 360
                 }).repeatForever().start();
                 var s = new cc.Node;
-                s.addComponent(cc.Sprite).spriteFrame = l.default.Instance.fruit[10], s.parent = c, s.position = cc.v2(0), d.default.Instance.Play(4, !1, 1), i.default.Instance.ribbonEffect(cc.v2(0, 0)), c.runAction(cc.sequence(cc.spawn(cc.jumpBy(1, 0, 0, 300, 1), cc.scaleTo(1, 1)), cc.delayTime(1), cc.spawn(cc.moveTo(1, cc.v2(0, 500)), cc.scaleTo(1, 0)), cc.callFunc(function () {
+                s.addComponent(cc.Sprite).spriteFrame = l.default.Instance.fruit[reverseLevelUp ? 0 : 10], s.parent = c, s.position = cc.v2(0), d.default.Instance.Play(4, !1, 1), i.default.Instance.ribbonEffect(cc.v2(0, 0)), c.runAction(cc.sequence(cc.spawn(cc.jumpBy(1, 0, 0, 300, 1), cc.scaleTo(1, 1)), cc.delayTime(1), cc.spawn(cc.moveTo(1, cc.v2(0, 500)), cc.scaleTo(1, 0)), cc.callFunc(function () {
                   a.default.score += 100, u.default.Instance.SetScoreTween(a.default.score), e.active = !1, a.default.playerTouch = !0, c.destroy()
                 }))), n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
               }).start()))
