@@ -105,7 +105,7 @@
 
 14. 开启选分弹窗：改 extraSettings.js 文件
 
-15. 点击右上方图标更换水果: 改 extraSettings.js 文件（暂未支持）
+15. 点击右上方图标更换水果: 改 extraSettings.js 文件
 
 
 ### 上线发布
