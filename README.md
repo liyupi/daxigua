@@ -112,15 +112,22 @@
 
 > 提供了多种上线发布方式，腾讯云一键部署、Vercel、腾讯云静态网站托管、GitHub Pages 等，小白建议使用 Vercel。
 
-#### 腾讯云一键部署
+#### 腾讯云 Webify 一键部署
 
-适用于会 fork 仓库、提交代码的同学。
+腾讯云 Webify 支持将模板克隆至您的个人仓库，部署应用，并且在代码更新后自动触发重新部署。
 
-点击下方按钮，无需任何操作，即可部署我的仓库到腾讯云 ⬇️
+点击下方按钮：
 
-> 如果要替换为一键部署自己的仓库，要先 fork 我的仓库，本地修改后再提交到自己 fork 的仓库，最后把一键部署按钮仓库地址改为自己的仓库即可！
+[![](https://cloudbase.net/deploy.svg)](https://console.cloud.tencent.com/webify/new?tpl=https%3A%2F%2Fgithub.com%2Fliyupi%2Fdaxigua&reponame=daxigua)
 
-[![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https://github.com/liyupi/daxigua&branch=master)
+应用配置如下：
+
+- **构建命令** 与 **安装命令** 为空
+- **输出目录** 填为 `.`
+
+![](https://main.qcloudimg.com/raw/8ca88a49907cd6f2657084d9a63def15.png)
+
+随后点击部署应用即可。
 
 
 #### Vercel
