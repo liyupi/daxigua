@@ -4,7 +4,7 @@ FROM node:${NODE_VERSION}
 
 COPY . /daxigua
 
-RUN npm config set registry https://registry.npm.taobao.org && \
+RUN npm config set registry https://registry.npmmirror.com && \
     npm i -g serve
 
 WORKDIR /daxigua
